@@ -1,0 +1,6 @@
+{
+  "name": "a-medias",
+  "main": "dist/server/index.js",
+  "compatibility_date": "2025-09-01",
+  "workers_dev": true
+}
