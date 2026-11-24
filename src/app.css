@@ -108,3 +108,73 @@ html[data-theme="dark"]{color-scheme:dark;background:#101c18}
 #language-menu button[aria-checked="true"]{background:var(--menu-active)}
 #language-menu .tick{visibility:hidden}#language-menu [aria-checked="true"] .tick{visibility:visible}
 #theme .sun,[data-theme="dark"] #theme .moon{display:none}[data-theme="dark"] #theme .sun{display:block}
+
+/* Editorial layout and dinner-table still life */
+@media screen {
+  body {background:#f7f7f2;font-family:"Inter",system-ui,sans-serif}
+  header,main,footer {max-width:1256px}
+  header {min-height:84px}
+  header nav a {font-weight:550}
+  .brand {letter-spacing:-.065em}
+  .brand b {background:#bde48c;box-shadow:none;transform:none;border-radius:50%}
+  .hero {padding:0;gap:0;grid-template-columns:1.07fr 1fr;background:#103e32;border:0;border-radius:22px}
+  .hero>div:first-child {padding:clamp(30px,4.2vw,62px)}
+  .hero small {display:flex;align-items:center;gap:10px;color:#d1ebac;font:650 11px/1.4 system-ui;letter-spacing:.16em}
+  .hero small::before {content:"";width:25px;height:2px;background:currentColor}
+  .hero h1 {font-size:clamp(60px,6.8vw,90px);letter-spacing:-.075em;line-height:.96;margin:21px 0}
+  .hero h1 em {color:#d2ecad;letter-spacing:-.065em}
+  .hero p {max-width:38ch;color:#e0ebe3}
+  .hero-actions {gap:12px;margin-top:24px}
+  .hero-actions a,.hero-actions button {border-radius:24px;padding:12px 17px;line-height:1.35}
+  .hero-actions a {background:#d6efb2;box-shadow:none}
+  .hero-actions button,[data-theme="dark"] .hero-actions button {background:transparent;border:1px solid #82a497;color:#fff}
+  .table-scene {isolation:isolate;min-height:320px;border:0;border-radius:0;background-color:#adc39c;background-image:linear-gradient(128deg,#dae6c17a,transparent 48%,#34563540),repeating-linear-gradient(90deg,#eef1de52 0 1px,transparent 1px 4px),repeating-linear-gradient(0deg,#637d6340 0 1px,transparent 1px 4px)}
+  .art {position:absolute;inset:0;display:grid;place-items:center;width:100%;height:100%;margin:0;transform:none}
+  .plate {position:absolute;width:75%;max-width:370px;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 46% 43%,#f6f3dd 0 47%,#edead5 54%,#c3c6ab 60%,#faf8e9 64%,#eae8d4 72%,#bbc3a9 75%);box-shadow:inset 2px 3px 3px #ffffed,3px 6px 0 #bdc2ad,10px 22px 22px #263e2a47;transform:translate(3%,1%)}
+  .napkin {position:absolute;width:38%;height:126%;top:-14%;left:46%;transform:rotate(28deg);background:repeating-linear-gradient(90deg,transparent 0 4px,#364d6a15 4px 5px),linear-gradient(90deg,#6483a1,#adc3d0 8%,#8ea9b9 52%,#bed0d6 97%,#8198aa);box-shadow:5px 7px 10px #213a4036;border-inline:3px double #dbe4e5}
+  .front {position:relative;width:178px;height:229px;padding:22px 17px;background:linear-gradient(110deg,#fffdf3,#f4edd9);color:#203b30;animation:none;transform:rotate(-10deg)}
+  .front strong {letter-spacing:.04em}
+  .section-heading {margin:clamp(30px,4vw,52px) 0 18px}
+  .section-heading a {font-weight:600}
+  .workspace {gap:24px;grid-template-columns:minmax(0,1.14fr) minmax(0,1fr)}
+  .card,[data-theme="dark"] .card {border-radius:18px;box-shadow:0 5px 22px #132d2009;padding:clamp(20px,2.6vw,36px)}
+  .card h2 {margin-top:0;letter-spacing:-.055em}
+  .summary {scroll-margin-top:16px}
+  .total,[data-theme="dark"] .total {background:#174638;color:#f9ffef;border-radius:12px;padding:23px}
+  .total span,[data-theme="dark"] .total span {color:#d1e5cb}
+  .total strong {font-size:clamp(38px,4vw,58px);font-weight:650;letter-spacing:-.065em}
+  .total::after {display:none}
+  #receipt {border-block:1px solid #869b7e66;padding:14px 0}
+  #receipt summary {padding:4px 0}
+  textarea {font:inherit;border:1px solid #aab8a9;border-radius:8px;padding:10px;color:inherit}
+  .ticket-members label {border:1px solid #8a9d884d;padding:6px 11px;border-radius:24px;cursor:pointer}
+  .ticket-members input {width:17px;height:17px;accent-color:#366646}
+  .ticket-members label:has(:checked) {border-color:#51835b;background:#e3efda;color:#213c28}
+  .ticket-line {min-width:0}
+  #faq {margin:55px auto 70px}
+  #faq summary {padding:4px 0}
+}
+@media screen and (max-width:760px) {
+  .workspace {grid-template-columns:minmax(0,1fr)}
+  .hero {grid-template-columns:1.25fr 1fr}
+  .hero>div:first-child {padding:30px 24px}
+  .plate {width:94%}
+  .art .front {transform:rotate(-10deg) scale(.88)}
+}
+@media screen and (max-width:560px) {
+  header {min-height:70px;row-gap:8px}
+  header nav {padding-bottom:1px}
+  .hero {grid-template-columns:1fr}
+  .hero h1 {font-size:62px}
+  .hero>div:first-child {padding:29px 22px 25px}
+  .hero-actions {gap:8px;margin-top:17px}
+  .hero-actions a,.hero-actions button {font-size:13px;padding:10px 13px}
+  .table-scene {height:156px;min-height:0}
+  .plate {width:198px}
+  .napkin {width:86px;height:200%;top:-45%}
+  .art .front {transform:rotate(-10deg) scale(.61)}
+  .art {grid-template-rows:minmax(0,1fr)}
+  .section-heading {align-items:center}
+  .section-heading a {text-align:right}
+  .filebar {padding:17px}
+}

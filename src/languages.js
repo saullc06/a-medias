@@ -1,4 +1,5 @@
 const translations = {
+  "Ver resumen ↓": ["View summary ↓", "Voir le bilan ↓"],
   "Activar modo oscuro": ["Switch to dark mode", "Activer le mode sombre"],
   "Activar modo claro": ["Switch to light mode", "Activer le mode clair"],
   "Idioma": [
